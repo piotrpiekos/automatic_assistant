@@ -1,0 +1,114 @@
+ [
+        {
+            "name": "analyze_url",
+            "description": "investigate html website in 'link' and look for return things as specified in natural language in 'query'",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "link": {
+                        "type": "string",
+                        "description": "link of the website"
+                    },
+                    "query": {
+                        "type": "string",
+                        "description": "description of what to find on the website"
+                    }
+                },
+                "required": ["link", "query"]
+            }
+        },
+        {
+            "name": "process_csv",
+            "description": "open csv file in 'path_to_file', process it as specified in natural language in 'task', can return a string",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "path_to_file": {
+                        "type": "string",
+                        "description": "path to to the csv file that should be edited"
+                    },
+                    "task": {
+                        "type": "string",
+                        "description": "description of the operation to do on the file"
+                    }
+                },
+                "required": ["path_to_file", "task"]
+            }
+        },
+        {
+            "name": "save_to_file",
+            "description": "saves 'text' to the file in path 'path'",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "text": {
+                        "type": "string",
+                        "description": "text to save in the file"
+                    },
+                    "path": {
+                        "type": "string",
+                        "description": "path to the file where it should be saved"
+                    }
+                },
+                "required": ["text", "path"]
+            }
+        },
+        {
+            "name": "send_email",
+            "description": "sends email to 'recipient' with subject 'subject' and body 'text'. This function cannot send files. Put all the information in the variable 'text'",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "recipient": {
+                        "type": "string",
+                        "description": "email adress of the person that should receive the email"
+                    },
+                    "subject": {
+                        "type": "string",
+                        "description": "subject of the email to send"
+                    },
+                    "text": {
+                        "type": "string",
+                        "description": "body of the email, should contain all the information in the email"
+                    }
+                },
+                "required": ["recipient", "subject", "text"]
+            }
+        },
+        {
+            "name": "write_text",
+            "description": "Write a text from original 'text' for the purpose specified in 'purpose'. Useful for extracting information from the text",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "original_text": {
+                        "type": "string",
+                        "description": "original text to write or extract information from"
+                    },
+                    "purpose": {
+                        "type": "string",
+                        "description": "what should be extracted from the text"
+                    }
+                },
+                "required": ["original_text", "purpose"]
+            }
+        },
+        {
+            "name": "save_to_variable",
+            "description": "Saves the data to the variable 'variable_name'",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "data": {
+                        "type": "string",
+                        "description": "data that should be save to a variable"
+                    },
+                    "variable_name": {
+                        "type": "string",
+                        "description": "name of the variable to which it should be saved"
+                    }
+                },
+                "required": ["data", "variable_name"]
+            }
+        }
+ ]

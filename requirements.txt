@@ -1,0 +1,4 @@
+openai
+BeautifulSoup4
+pandas
+requests
