@@ -9,11 +9,18 @@ from data/test.csv select the website which was visited the most. Then find out 
 ```
 
 
-## Installation
+## Installation 
 ```
 pip install -r requirements.txt
 ```
-**In order to use email sending it is necessary to create a profile with password in the `data/profiles`**
+
+Make sure that environmental variable `OPENAI_API_KEY` the contains key to openai api.
+
+Create a profile by editing the `data/profiles` and adding similar one to `piotr`. In order to use email features it is necessary to put app specific password from gmail (mail assumes its host is gmail)
+** (This is of course just a hack for the demo version, no one with the right mind would store passwords like that) **
+
+run scripts from the main project directory for example:
+```python main.py -n piotr -t "enter https://aigrant.com and find out who can apply for the grant. Save the result to the file \"result.txt\""```
 
 
 
